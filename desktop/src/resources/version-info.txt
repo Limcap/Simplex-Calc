@@ -1,0 +1,72 @@
+
+Geral
+
++ criar pasta de dependencias
++ criar pasta de resources
+- ajustar todos os javadocs
+
+----------------------------------------------------------------------------------------------------
+SimplexCalc / Simplex
+
+v.0.1
++ a tabela passada para a exibicao do pivo esta errada
++ criar variaveis locais na funcao executar para todos os dados puxados do SimplexMapper
++ exibicao do pivo deve seguir o padrao de nomeclatura das iteracoes: fo_0, r1_0, etc...
++ retirar instancia do SimplexMapper dos parametros  da funcao exibirPassoApasso
++ funcao de exibir passo-a-passo deve incorporar o resultado
++ solução: mostrar as variáveis não básicas como 0
++ solução: sempre mostrar o sistema linear
+
+v.0.2
++ Renomeado para "Simplex" para melhor representar a importância
++ Todos os métodos de exibição foram relocados para uma nova classe SimplexViewer 
+- numero de casas decimais nos resultados: implementar
+- numero de casas decimais: controle pro usuario escolher: implementar
+- mesclar isResolvido e isIndeterminado
+
+----------------------------------------------------------------------------------------------------
+SimplexMapper
+
+v.0.3
++ sistema linear: o termo independente está com decimal .0
++ método buildCabecalho: alterar para retornar um array em vez de lista
++ expressao: criar exceção ao calcular com numero de restricoes menor que o minimo
++ expressao: aceitar coeficiente 1 se o usuario nao colocar coeficiente na frente da variavel
++ expressao: nao aceitar expressão com todos os coeficientes iguais a zero
++ expressão: bug: termo independente era transformado em 0 se tivesse casas decimais.
+
+----------------------------------------------------------------------------------------------------
+SimplexGUI / MainGUI
+
+v.0.1
++ scroll: ao clicar em calcular, manter o scroll no topo
++ exemplos: passar para uma barra de menu
++ exemplos: ao clicar em um exemplo, limpar o campo de resultado
+
+v.0.2
++ Renomeado para MainGUI e removido do pacote simplex, pois não é diretamente relacionado
+  às funcionalidades do simplex
++ Criada a classe EasyMenuBar para construir o menu
++ Separados a declaracao dos componentes, a inicializaçao, e a montagem do layout.
++ tirado os exemplos do final
+
+----------------------------------------------------------------------------------------------------
+SimplexViewer
+
+v.0.1
++ A solução é mostrada sempre com 2 casas decimais
+
+----------------------------------------------------------------------------------------------------
+EasyMenuBar
+
+v.0.1
+- tentativa de fazer um botao funcionar na barra de menu: falhou
+
+----------------------------------------------------------------------------------------------------
+Gridder
+
+v.0.6
+- Fazer com que tdas as celulas de uma mesma coluna usem a mesma quantidade de casas decimais
+- Sincronizar o tamanho das celulas 'math' para ficar igual ao tamanho das celular 'text' de
+  uma mesma coluna
+- implementar junção de células
